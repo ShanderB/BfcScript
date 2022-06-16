@@ -1,0 +1,25 @@
+{
+    "name": "bfcb",
+    "displayName": "Bfc Betha",
+    "description": "bfc betha test",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bfcb",
+            "aliases": ["Bfc Betha", "bfcb"],
+            "extensions": [".bfcb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bfcb",
+            "scopeName": "source.bfcb",
+            "path": "./syntaxes/bfcb.tmLanguage.json"
+        }]
+    }
+}

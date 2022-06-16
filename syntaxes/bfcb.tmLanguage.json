@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/groovy/syntaxes/groovy.tmLanguage.json",
+	"name": "Bfc Betha",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.bfcb",
+					"match": "\\b(if|for|null|return)\\b"
+				},
+				{
+					"name": "keyword.control.loop.bfcb",
+					"match": "\\b(break|continue|for|while)\\b"
+				},
+				{
+					"name": "keyword.control.switch.bfcb",
+					"match": "\\b(case|default|switch)\\b"
+				},
+				{
+					"name": "keyword.control.conditional.bfcb",
+					"match": "\\b(else|if)\\b"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.bfcb",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.bfcb"
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single.bfcb",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.bfcb"
+						}
+					]
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"include": "#comments-doc-oldschool"
+				},
+				{
+					"include": "#comments-doc"
+				},
+				{
+					"include": "#comments-inline"
+				}
+			]
+		},
+		"comments-inline": {
+			"patterns": [
+				{
+					"include": "#comments-block"
+				},
+				{
+					"match": "((//).*)$",
+					"captures": {
+						"1": {
+							"name": "comment.line.double-slash.bfcb"
+						}
+					}
+				}
+			]
+		},
+		"comments-block": {
+			"patterns": [
+				{
+					"name": "comment.block.bfcb",
+					"begin": "/\\*",
+					"end": "\\*/",
+					"patterns": [
+						{
+							"include": "#comments-block"
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "source.bfcb"
+}

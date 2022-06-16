@@ -17,11 +17,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.bfcb",
-					"match": "\\b(if|for|null|return)\\b"
+					"match": "\\b(if|for|null|return|se|senao)\\b"
 				},
 				{
 					"name": "keyword.control.loop.bfcb",
-					"match": "\\b(break|continue|for|while)\\b"
+					"match": "\\b(break|continue|for|while|percorrer|enquanto|continuar|parar)\\b"
 				},
 				{
 					"name": "keyword.control.switch.bfcb",
@@ -29,7 +29,7 @@
 				},
 				{
 					"name": "keyword.control.conditional.bfcb",
-					"match": "\\b(else|if)\\b"
+					"match": "\\b(else|if|se|senao)\\b"
 				}
 			]
 		},
